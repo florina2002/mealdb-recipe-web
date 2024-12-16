@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Search</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="search-box">
+      <label for="ingredient">Ingredient</label>
+      <input type="text" id="ingredient" placeholder="Enter an ingredient">
+      <button onclick="searchRecipes(); moveSearchBoxToTop();">Search</button>
+    </div>
+    <div id="loading" class="loading">
+      <img src="loading.gif" alt="Loading...">
+    </div>      
+    <div id="results" class="results"></div>
+  </div>
+
+  <div id="recipeOverlay" class="overlay">
+    <div class="overlay-content">
+      <h2 id="recipeTitle"></h2>
+      <img id="recipeImage" alt="Recipe Image">
+      <p><strong>Category:</strong> <span id="recipeCategory"></span></p>
+      <p><strong>Area:</strong> <span id="recipeArea"></span></p>
+      <p id="recipeInstructions"></p>
+      <button onclick="deleteRecipe()">Delete</button>
+      <button onclick="closeOverlay()">Cancel</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
